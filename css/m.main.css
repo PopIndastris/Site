@@ -314,13 +314,13 @@ header {
 
 .marqueeContainer div {display: flex;}
 
-.line div {animation: line 10s linear infinite;}
+.line div {animation: line 30s linear infinite;}
 
-.line2 div {animation: line2 10s linear infinite;}
+.line2 div {animation: line2 30s linear infinite;}
 
-.line3 div {animation: line3 10s linear infinite;}
+.line3 div {animation: line3 30s linear infinite;}
 
-.line4 div {animation: line4 10s linear infinite;}
+.line4 div {animation: line4 30s linear infinite;}
 
 .line {left: -335px;}
 
@@ -564,180 +564,101 @@ header {
                         /* LAST BLOCK */
 
 .lastBlock {
-    height: 100%;
+    height: 1315px;
     width: 100%;
 }
 
 .lastContainer {
-    width: 1200px;
-    height: 720px;
-    margin: 50px auto;
+    width: 360px;
+    height: 100%;
+    margin: 60px auto;
     display: flex;
-}
-
-.questionnaire {
-    height: 680px;
-    width: 560px;
-    border-radius: 30px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(110deg, #B66BE3, #582DA4);
-    margin: 20px;
 }
 
 .lastContent {
-    height: 720px;
-    width: 600px;
+    height: 1362px;
+    width: 360px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.lastContentPart {
-    height: 720px;
-    width: 300px;
-    margin: 20px;
+.lastItem {
+    width: 330px;
+    height: 160px;
+    margin: 10px auto;
+    position: relative;
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
 }
 
-.lastHigh {
-    width: 260px;
-    height: 360px;
-    background: black;
+.questionnaire {
+    height: 522px;
+    width: 330px;
+    border-radius: 30px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(110deg, #B66BE3, #582DA4);
+    margin: 20px auto;
 }
-
-.lastLow {
-    width: 260px;
-    height: 280px;
-    background: black;
-}
-
                             /* FORM */
 
 .form {
     height: 350px;
-    width: 445px;
-    margin: 30px 0 0 58px;
+    width: 268px;
+    margin: 20px auto;
 }
 
 .formInput {
-    width: 445px;
-    height: 125px;
+    width: 268px;
+    height: 165px;
     display: flex;
     align-content: space-between;
     flex-wrap: wrap;
 }
 
 .inputAll {
-    height: 51px;
-    width: 440px;
+    height: 41px;
+    width: 263px;
     background: none;
     border: 2px solid #fff;
     border-radius: 5px;
     padding-left: 40px;
     color: #fff;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 14px;
+    line-height: 17px;
     font-weight: 400;
 }
 
-.inputAll:focus {outline: none}
-                        /* RADIO */
-.formRadio {
-    height: 51px;
-    width: 444px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.radioLabel {
-    display: flex;
-    align-items: center;
-    height: 46px;
-    width: 136px;
+.callWay {
+    height: 45px;
+    width: 268px;
+    background: none;
     border: 2px solid #fff;
     border-radius: 5px;
-    background: none;
-    cursor: pointer;
+    padding-left: 40px;
     color: #fff;
     font-size: 14px;
     line-height: 17px;
-    user-select: none;
+    font-weight: 400;
 }
 
-.radioTelImg {
-    height: 30px;
-    width: 30px;
-    margin: 0 10px 0 11px;
-    background: url(../img/telIcoActive.png) center/30px 30px no-repeat;
+select option {
+    color: black;
 }
 
-.radioWhatsAppImg {
-    height: 30px;
-    width: 30px;
-    margin: 0 10px 0 11px;
-    background: url(../img/whatsAppIcoActive.png) center/30px 30px no-repeat;
-}
-
-.radioTelegramImg {
-    height: 30px;
-    width: 30px;
-    margin: 0 10px 0 11px;
-    background: url(../img/telegramIcoActive.png) center/30px 30px no-repeat;
-}
-
-.radioLabel:hover {
-    background: #fff;
-    color: #7E59C0;
-}
-
-.radioLabel:hover .radioTelImg {
-    transition: .15s;
-    background: url(../img/telIco.png) center/30px 30px no-repeat;
-}
-
-.radioLabel:hover .radioWhatsAppImg {
-    transition: .15s;
-    background: url(../img/whatsAppIco.png) center/30px 30px no-repeat;
-}
-
-.radioLabel:hover .radioTelegramImg {
-    transition: .15s;
-    background: url(../img/telegramIco.png) center/30px 30px no-repeat;
-}
-
-.radioLabel:active {
-    transition: .1s;
-    transform: scale(.95);
-}
-
-.radioBtn {display: none}
-
-.formRadio input[type=radio]:checked + label {
-    color: #7E59C0;
-	background: #fff;
-}
-
-.formRadio input[type=radio]:checked + label i.radioTelImg {
-    background: url(../img/telIco.png) center/30px 30px no-repeat;
-}
-
-.formRadio input[type=radio]:checked + label i.radioWhatsAppImg {
-    background: url(../img/whatsAppIco.png) center/30px 30px no-repeat;
-}
-
-.formRadio input[type=radio]:checked + label i.radioTelegramImg {
-    background: url(../img/telegramIco.png) center/30px 30px no-repeat;
-}
+.inputAll:focus {outline: none}
+select:focus {outline: none}
 
                         /* FORM BUTTON */
 
 .formButton {
-    width: 246px;
-    height: 61px;
-    margin: 23px 0 20px 0;
+    width: 267px;
+    height: 55px;
+    margin: 20px auto 10px auto;
     color: #7E59C0;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
-    line-height: 21px;
+    line-height: 19px;
     background: #fff;
     border: 2px solid #fff;
     border-radius: 5px;
@@ -745,13 +666,6 @@ header {
     align-items: center;
     justify-content: center;
     user-select: none;
-}
-
-.formButton:hover {
-    cursor: pointer;
-    color: #fff;
-    background: none;
-    transition: .3s;
 }
 
 .formButton:active {
@@ -762,23 +676,25 @@ header {
                         /* LASTBLOCK FONTS */
 
 .lastH1 {
-    height: 108px;
-    width: 436px;
+    height: 75px;
+    width: 304px;
     color: #fff;
-    font-size: 30px;
+    font-size: 21px;
     font-weight: bold;
-    line-height: 36px;
-    margin: 58px 0 0 58px;
+    line-height: 25px;
+    text-align: center;
+    margin: 40px auto 0 auto;
 }
 
 .lastCaption1 {
-    height: 26px;
-    width: 436px;
+    height: 42px;
+    width: 249px;
     color: #fff;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 600;
-    line-height: 26px;
-    margin: 30px 0 0 58px;
+    line-height: 21px;
+    text-align: center;
+    margin: 30px auto 0 auto;
 }
 
 .lastCaption2 {
@@ -791,12 +707,13 @@ header {
 }
 
 .lastCaption3 {
-    height: 17px;
-    width: 446px;
+    height: 24px;
+    width: 238px;
     color: #fff;
-    font-size: 14px;
-    line-height: 17px;
-    margin-left: 58px;
+    font-size: 10px;
+    line-height: 12px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .lastSpan {
@@ -805,36 +722,47 @@ header {
 }
 
 .lastH2 {
-    width: 238px;
+    width: 200px;
     color: #fff;
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 600;
-    line-height: 30px;
-    margin: 35px 0 0 20px;
+    line-height: 26px;
+    margin-left: 20px;
 }
 
                         /* LAST IMG */
 
+.lastContent img {
+    position: absolute;
+}
+
 .lastImg1 {
-    width: 213px;
-    margin: 34px 0 0 61px;
+    width: 157px;
+    height: 136px;
+    right: -13px;
+    top: 37px;
+
 }
 
 .lastImg2 {
-    width: 142px;
-    height: 135px;
-    margin: 33px 0 0 59px;
+    width: 108px;
+    height: 103px;
+    right: 11px;
+    top: 37px;
 }
 
 .lastImg3 {
-    width: 124px;
-    height: 125px;
-    margin: 13px 0 0 63px;
+    width: 103px;
+    height: 104px;
+    right: 15px;
+    top: 28px;
 }
 
 .lastImg4 {
-    width: 213px;
-    margin: 38px 0 0 61px;
+    width: 134px;
+    height: 132px;
+    right: -8px;
+    top: 36px;
 }
 
                         /* LAST CONTENT COLORS */
@@ -851,39 +779,36 @@ header {
 
 footer {
     width: 100%;
-    height: 209px;
+    height: 302px;
     background: #171C22;
 }
 
 .footerContainer  {
-    width: 1160px;
+    width: 360px;
     margin: 0 auto;
-}
-
-.footerTopContainer {
-    width: 100%;
-    height: 106px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
 }
 
 .footerLogo {
-    height: 100%;
-    margin-right: 100px;
+    height: 44px;
+    width: 79px;
     display: flex;
     align-items: center;
+    margin-top: 25px;
 }
 
 .footerLogoImg {
-    width: 106px;
-    height: 60px;
+    width: 79px;
+    height: 44px;
 }
 
 .footerMenu {
     height: 100%;
     display: flex;
     align-items: center;
+    margin-top: 25px;
 }
 
 .footerIco {
@@ -893,409 +818,89 @@ footer {
 }
 
 .facebookIco {
-    height: 44px;
-    width: 44px;
-    background: url(../img/facebookIco.png) center/44px 44px no-repeat;
+    height: 35px;
+    width: 35px;
+    background: url(../img/facebookIco.png) center/35px 35px no-repeat;
 }
 
 .facebookIco:hover {
-    background: url(../img/facebookIcoActive.png) center/44px 44px no-repeat;
+    background: url(../img/facebookIcoActive.png) center/35px 35px no-repeat;
     transition: .1s;
 }
 
 .telegramIco {
-    height: 44px;
-    width: 44px;
-    background: url(../img/telegramIco.png) center/44px 44px no-repeat;
+    height: 35px;
+    width: 35px;
+    background: url(../img/telegramIco.png) center/35px 35px no-repeat;
 }
 
 .telegramIco:hover {
-    background: url(../img/telegramIcoActive.png) center/44px 44px no-repeat;
+    background: url(../img/telegramIcoActive.png) center/35px 35px no-repeat;
     transition: .1s;
 }
 
 .whatsAppIco {
-    height: 44px;
-    width: 44px;
-    background: url(../img/whatsAppIco.png) center/44px 44px no-repeat;
+    height: 35px;
+    width: 35px;
+    background: url(../img/whatsAppIco.png) center/35px 35px no-repeat;
 }
 
 .whatsAppIco:hover {
-    background: url(../img/whatsAppIcoActive.png) center/44px 44px no-repeat;
+    background: url(../img/whatsAppIcoActive.png) center/35px 35px no-repeat;
     transition: .1s;
 }
 
 .instagramIco {
-    height: 44px;
-    width: 44px;
-    background: url(../img/instagramIco.png) center/44px 44px no-repeat;
+    height: 35px;
+    width: 35px;
+    background: url(../img/instagramIco.png) center/35px 35px no-repeat;
 }
 
 .instagramIco:hover {
-    background: url(../img/instagramIcoActive.png) center/44px 44px no-repeat;
+    background: url(../img/instagramIcoActive.png) center/35px 35px no-repeat;
     transition: .1s;
 }
 
 .footerMail {
-    font-size: 20px;
+    font-size: 14px;
+    line-height: 17px;
     font-weight: bold;
     color: #fff;
+    margin-top: 25px;
 }
 
-.footerBottomContainer {
-    width: 100%;
-    height: 82px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+.footerTel {
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #fff;
+    margin-top: 10px;
 }
 
 .privacyPolicy {
-    height: 21px;
-    color: #7E59C0;
+    height: 24px;
+    width: 141px;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    color: #fff;
     font-size: 18;
 }
 
-.privacyPolicy:hover {
-    color: #fff;
-    transition: .3s;
+.privacyPolicy span {
+    color: #7E59C0;
 }
 
 #toTop {
+    margin-top: 15px;
     color: #fff;
-    height: 37px;
-    width: 172px;
+    height: 42px;
+    width: 50px;
     font-size: 18px;
     display: flex;
-    justify-content: space-between;
     align-items: center;;
-    cursor: pointer;
-    user-select: none;
-}
-
-.toTopIco {
-    width: 15px;
-    height: 37px;
-    background: url(../img/toTopIco.png) center/15px 37px no-repeat;
-}
-/* Z FORM */
-
-.zForm {
-display: none;
-}
-
-.zFormBack {
-position: fixed;
-width: 100%;
-height: 100%;
-top: 0;
-z-index: 10;
-background: rgba(23, 28, 34, 0.8);
-}
-
-.zFormWrapper {
-z-index: 11;
-display: flex;
-align-items: center;
-justify-content: center;
-position: fixed;
-width: 100%;
-height: 100%;
-top: 0;
-pointer-events: none;
-}
-
-.zFormContainer {
-width: 560px;
-height: 579px;
-background: linear-gradient(110deg, #FFFFFF, #D8DEE8);
-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-border-radius: 30px;
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-align-content: flex-start;
-pointer-events: all;
-position: relative;
-}
-
-.zFormCross {
-position: absolute;
-width: 24px;
-height: 24px;
-top: 20px;
-right: 20px;
-cursor: pointer;
-}
-
-.zFormLogo {
-margin-top: 62px;
-}
-
-.zFormH1 {
-font-weight: 700;
-font-size: 30px;
-line-height: 36px;
-width: 450px;
-text-align: center;
-color: #171C22;
-margin-top: 38px;
-}
-
-.zFormCaption {
-font-size: 20px;
-line-height: 24px;
-color: #171C22;
-height: 24px;
-width: 242px;
-margin-top: 32px;
-}
-
-.zFormCaption2 {
-width: 321px;
-height: 48px;
-font-weight: 700;
-font-size: 20px;
-line-height: 24px;
-text-align: center;
-color: #7E59C0;
-margin-top: 66px;
-}
-
-.zFormTel {
-font-weight: 700;
-font-size: 24px;
-line-height: 29px;
-color: #7E59C0;
-height: 29px;
-width: 100%;
-margin: 5px auto 0 auto;
-text-align: center;
-}
-
-.zFormMenu {
-height: 37px;
-width: 170px;
-margin-top: 5px;
-display: flex;
-justify-content: space-between;
-}
-
-.zFormMenu svg path {
-    fill: #B1B8C0;
-}
-
-.zFormMenu svg:hover path {
-    fill: #7E59C0;
-}
-
-.zFormMenu svg:active path {
-    transition: .3s;
-    transform: scale(.9);
-}
-
-                        /* zApplication */
-
-.zApplication {
-    display: none;
-}
-
-.appBack {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    z-index: 10;
-    background: rgba(23, 28, 34, 0.8);
-}
-
-.appContainer {
-    z-index: 11;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    pointer-events: none;
-}
-
-.appquestionnaire {
-    pointer-events: all;
-    height: 580px;
-    width: 560px;
-    border-radius: 30px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(110deg, #B66BE3, #582DA4);
-    margin: 20px;
-    position: relative;
-}
-
-.appCross {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-}
-
-.appform {
-    height: 350px;
-    width: 445px;
-    margin: 30px 0 0 58px;
-}
-
-.appformInput {
-    width: 445px;
-    height: 125px;
-    display: flex;
-    align-content: space-between;
-    flex-wrap: wrap;
-}
-
-.appinputAll {
-    height: 51px;
-    width: 440px;
-    background: none;
-    border: 2px solid #fff;
-    border-radius: 5px;
-    padding-left: 40px;
-    color: #fff;
-    font-size: 16px;
-    line-height: 19px;
-    font-weight: 400;
-}
-
-.appinputAll:focus {outline: none}
-
-.appformRadio {
-    height: 51px;
-    width: 444px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.appradioLabel {
-    display: flex;
-    align-items: center;
-    height: 46px;
-    width: 136px;
-    border: 2px solid #fff;
-    border-radius: 5px;
-    background: none;
-    cursor: pointer;
-    color: #fff;
-    font-size: 14px;
-    line-height: 17px;
-    user-select: none;
-}
-
-.appradioLabel:hover {
-    background: #fff;
-    color: #7E59C0;
-}
-
-.appradioLabel:hover .radioTelImg {
-    transition: .15s;
-    background: url(../img/telIco.png) center/30px 30px no-repeat;
-}
-
-.appradioLabel:hover .radioWhatsAppImg {
-    transition: .15s;
-    background: url(../img/whatsAppIco.png) center/30px 30px no-repeat;
-}
-
-.appradioLabel:hover .radioTelegramImg {
-    transition: .15s;
-    background: url(../img/telegramIco.png) center/30px 30px no-repeat;
-}
-
-.appradioLabel:active {
-    transition: .1s;
-    transform: scale(.95);
-}
-
-.appradioBtn {display: none}
-
-
-.appformRadio input[type=radio]:checked + label {
-    color: #7E59C0;
-	background: #fff;
-}
-
-.appformRadio input[type=radio]:checked + label i.radioTelImg {
-    background: url(../img/telIco.png) center/30px 30px no-repeat;
-}
-
-.appformRadio input[type=radio]:checked + label i.radioWhatsAppImg {
-    background: url(../img/whatsAppIco.png) center/30px 30px no-repeat;
-}
-
-.appformRadio input[type=radio]:checked + label i.radioTelegramImg {
-    background: url(../img/telegramIco.png) center/30px 30px no-repeat;
-}
-
-.appformButton {
-    width: 246px;
-    height: 61px;
-    margin: 23px 0 20px 0;
-    color: #7E59C0;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 21px;
-    background: #fff;
-    border: 2px solid #fff;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
     justify-content: center;
     user-select: none;
-}
-
-.appformButton:hover {
-    cursor: pointer;
-    color: #fff;
-    background: none;
-    transition: .3s;
-}
-
-.appformButton:active {
-    transition: .1s;
-    transform: scale(.95);
-}
-
-.applastCaption1 {
-    height: 58px;
-    width: 436px;
-    color: #fff;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 29px;
-    margin: 60px 0 35px 58px;
-    text-align: center;
-}
-
-.applastCaption2 {
-    height: 24px;
-    width: 188px;
-    color: #fff;
-    font-size: 20px;
-    line-height: 24px;
-    margin: 26px 0 15px 0;
-}
-
-.applastCaption3 {
-    height: 17px;
-    width: 446px;
-    color: #fff;
-    font-size: 14px;
-    line-height: 17px;
-    margin-left: 58px;
-}
-
-.applastSpan {
-    text-decoration: underline;
-    cursor: pointer;
 }
 
                         /* OTHER */
