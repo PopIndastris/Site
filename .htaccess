@@ -1,0 +1,9 @@
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} .
+RewriteCond %{HTTP_REFERER} !^http://([^.]+\.)?site\. [NC]
+RewriteCond %{HTTP_REFERER} !google\. [NC]
+RewriteCond %{HTTP_REFERER} !search\?q=cache [NC]
+RewriteCond %{HTTP_REFERER} !msn\. [NC]
+RewriteCond %{HTTP_REFERER} !yahoo\. [NC]
+RewriteCond %{REQUEST_URI} !^/hotlinker\.gif$
+RewriteRule \.(gif|jpg|png)$ /hotlinker.gif [NC,L]

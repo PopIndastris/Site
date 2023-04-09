@@ -26,6 +26,7 @@
     height: 71px;
     background: #171C22;
     top: 0;
+
 }
 
                         /* HEADER */
@@ -79,6 +80,27 @@ header {
     height: 64px;
     position: relative;
 
+}
+
+.linguageButton {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 29px;
+    border: 1px solid #7E59C0;
+    border-radius: 5px;
+    font-size: 18px;
+    line-height: 21px;
+    color: #fff;
+    text-align: center;
+    left: 880px;
+}
+
+.linguageButton:hover {
+    border: 1px solid #fff;
+    transform: scale(1.1);
 }
 
 .headerMenuItem:hover .headerMenuLinks {
@@ -355,7 +377,7 @@ header {
     color: #fff;
     font-size: 24px;
     font-weight: 200;
-    margin: 41px 0 0 20px;
+    margin: 30px 0 0 20px;
 
 }
 
@@ -370,7 +392,7 @@ header {
     border: 2px solid #7E59C0;
     border-radius: 5px;
     background: #171C22;
-    margin: 55px 0 0 20px;
+    margin: 65px 0 0 20px;
     user-select: none;
 }
 
@@ -630,7 +652,7 @@ header {
 }
 
 .bottomMargin {
-    margin: 0 50px;
+    margin: 0 27px;
 }
 
                         /* GALLERY BUTTONS */
@@ -673,7 +695,7 @@ header {
     border: 2px solid #7E59C0;
     border-radius: 5px;
     background: #171C22;
-    margin: 45px auto;
+    margin: 15px auto 45px auto;
     user-select: none;
 }
 
@@ -724,7 +746,7 @@ header {
 .galleryWideImg {
     width: 1098px;
     height: 583px;
-    margin: 28px;
+    margin: 28px 28px 15px 28px;
 }
 
 
@@ -1145,114 +1167,132 @@ footer {
     height: 37px;
     background: url(../img/toTopIco.png) center/15px 37px no-repeat;
 }
-/* Z FORM */
+
+                        /* Z FORM */
 
 .zForm {
-display: none;
+    display: none;
 }
 
 .zFormBack {
-position: fixed;
-width: 100%;
-height: 100%;
-top: 0;
-z-index: 10;
-background: rgba(23, 28, 34, 0.8);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 10;
+    background: rgba(23, 28, 34, 0.8);
 }
 
 .zFormWrapper {
-z-index: 11;
-display: flex;
-align-items: center;
-justify-content: center;
-position: fixed;
-width: 100%;
-height: 100%;
-top: 0;
-pointer-events: none;
+    z-index: 11;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    pointer-events: none;
 }
 
 .zFormContainer {
-width: 560px;
-height: 579px;
-background: linear-gradient(110deg, #FFFFFF, #D8DEE8);
-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-border-radius: 30px;
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-align-content: flex-start;
-pointer-events: all;
-position: relative;
+    width: 560px;
+    height: 579px;
+    background: linear-gradient(110deg, #FFFFFF, #D8DEE8);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    pointer-events: all;
+    position: relative;
 }
 
 .zFormCross {
-position: absolute;
-width: 24px;
-height: 24px;
-top: 20px;
-right: 20px;
-cursor: pointer;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
 }
 
 .zFormLogo {
-margin-top: 62px;
+    margin-top: 62px;
 }
 
 .zFormH1 {
-font-weight: 700;
-font-size: 30px;
-line-height: 36px;
-width: 450px;
-text-align: center;
-color: #171C22;
-margin-top: 38px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    width: 450px;
+    text-align: center;
+    color: #171C22;
+    margin-top: 38px;
 }
 
 .zFormCaption {
-font-size: 20px;
-line-height: 24px;
-color: #171C22;
-height: 24px;
-width: 242px;
-margin-top: 32px;
+    font-size: 20px;
+    line-height: 24px;
+    color: #171C22;
+    height: 24px;
+    width: 242px;
+    margin-top: 32px;
+    text-align: center;
 }
 
 .zFormCaption2 {
-width: 321px;
-height: 48px;
-font-weight: 700;
-font-size: 20px;
-line-height: 24px;
-text-align: center;
-color: #7E59C0;
-margin-top: 66px;
+    width: 321px;
+    height: 48px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #7E59C0;
+    margin-top: 66px;
 }
 
 .zFormTel {
-font-weight: 700;
-font-size: 24px;
-line-height: 29px;
-color: #7E59C0;
-height: 29px;
-width: 100%;
-margin: 5px auto 0 auto;
-text-align: center;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #7E59C0;
+    height: 29px;
+    width: 100%;
+    margin: 5px auto 0 auto;
+    text-align: center;
 }
 
 .zFormMenu {
-height: 37px;
-width: 170px;
-margin-top: 5px;
-display: flex;
-justify-content: space-between;
+    height: 37px;
+    width: 170px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .zFormMenu svg path {
     fill: #B1B8C0;
 }
 
-.zFormMenu svg:hover path {
+.zFormMenu svg:hover path{
+    fill: #7E59C0;
+}
+
+.zFormMenu a:last-of-type svg circle:first-of-type {
+    stroke: #B1B8C0;
+}
+
+.zFormMenu a:last-of-type svg circle:last-of-type {
+    fill: #B1B8C0;
+}
+
+.zFormMenu a:last-of-type svg:hover circle:first-of-type {
+    stroke: #7E59C0;
+}
+
+.zFormMenu a:last-of-type svg:hover circle:last-of-type {
     fill: #7E59C0;
 }
 

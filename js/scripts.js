@@ -1,9 +1,10 @@
 
+
+
 						// HEADER
 
 jQuery(document).ready(function(){
 
-	// // Hide Header on on scroll down
 	let didScroll;
 	let lastScrollTop = 0;
 	let delta = 5;
@@ -265,32 +266,55 @@ for (let elm of elements) {
 	observer.observe(elm);
 }
 
-
-
-$('.formButton, .popUpFormButton, .appformButton').on('click', function() {
-	$('.zForm').addClass('display');
-	$('.zApplication').removeClass('display');
-});
+// $('.formButton, .popUpFormButton, .appformButton').on('click', function() {
+// 	$('.zForm').addClass('display');
+// 	$('.zApplication').removeClass('display');
+// });
 
 $('.zFormBack, .zFormCross').on('click', function() {
 	$('.zForm').removeClass('display');
 	$('.headerButtonPopUp').removeClass('displayPopUp');
 });
 
-
-$('.headerButton').on('click', function() {
-	$('.headerButtonPopUp').addClass('displayPopUp')
+$('.callButton').on('click', function() {
+	$('.burger').removeClass('is-active').addClass('is-deactive');
+	$('.headerMenu').removeClass('displayHeaderMenu');
 });
 
 
-$('.topButton').on('click', function() {
-	$('.zApplication').addClass('display')
+$('.headerButton').on('click', function() {
+	$('.headerButtonPopUp').addClass('displayPopUp');
+});
+
+
+$('.topButton, .callButton, .topFlexItem, .accDetailed').on('click', function() {
+	$('.zApplication').addClass('display');
 });
 
 $('.appBack, .appCross').on('click', function() {
-	$('.zApplication').removeClass('display')
+	$('.zApplication').removeClass('display');
 });
 
+$('.topItem').on('click', function() {
+	$('.topItemActive').removeClass('topItemActive').addClass('topItem');
+	$(this).removeClass('topItem').addClass('topItemActive');
+});
+$('.topItem').on('click', function() {
+	$('.topItemActive').removeClass('topItemActive').addClass('topItem');
+	$(this).removeClass('topItem').addClass('topItemActive');
+});
+
+$('.item').on('click', function() {
+	if ($(this).hasClass('active')) {
+		$(this).removeClass('active');
+	} else {
+		$(this).addClass('active');
+	};
+});
+
+
+
+$('#topItem').trigger('click');
 
 						// BURGER
 
@@ -305,8 +329,353 @@ $('.burger').on('click', function() {
 
 });
 
-						//NO RIGHT CLiCK
 
+						// ACCORDION
+
+$(document).ready(function() {
+	$('.accordCap').on('click', f_acc);
+});
+
+function f_acc(){
+	$('.accordContent').not($(this).next()).slideUp(500);
+	$(this).next().slideToggle(500);
+	if ($(this).find('div.ai1').hasClass('ai-active')) {
+		$(this).find('div.ai1').removeClass('ai-active');
+		$(this).find('div.ai2').removeClass('ai-active');
+	} else {
+		$('div.ai1').removeClass('ai-active');
+		$('div.ai2').removeClass('ai-active');
+		$(this).find('div.ai1').addClass('ai-active');
+		$(this).find('div.ai2').addClass('ai-active');
+	}
+}
+
+// let a = integer;
+// let go_os = true;
+//
+// $(document).ready(function () {
+// 	$(document).write('text')
+// })
+
+
+						// FORMSUBMIT
+
+						//1 SMALL POPUP
+
+$("[formId='sendMail1']").on('click', function() {
+    let phone = $("[formId='phone1']").val();
+    let communicationMethod = $("[formId='communicationMethod1']").val();
+
+
+ 	if (phone == '') {
+        alert('Введите номер телефона');
+        return false;
+    } else if (communicationMethod == 'hide') {
+        alert('Выберите способ связи');
+        return false;
+    }
+
+    $.ajax({
+        url: 'php/application.php',
+        type: 'POST',
+        cache: false,
+        data: { 'name': name , 'phone': phone, 'communicationMethod': communicationMethod },
+        dataType: 'html',
+        beforeSend: function () {
+            $('#sendMail1').prop('disabled', true);
+        },
+        success: function () {
+            $('#sendMail1').prop('disabled', false);
+			$('.zForm').addClass('display');
+			$('.zApplication').removeClass('display');
+        }
+    })
+    .done(function() {
+        console.log("success");
+    })
+    .fail(function() {
+        console.log("error");
+    })
+    .always(function() {
+        console.log("complete");
+    });
+
+
+});
+
+			// 2 BIG POPUP
+
+$("[formId='sendMail2']").on('click', function() {
+    let name = $("[formId='name2']").val();
+    let phone = $("[formId='phone2']").val();
+    let communicationMethod = $("[formId='communicationMethod2']").val();
+
+
+	if (name == '') {
+        alert('Введите Имя');
+        return false;
+    } else if (phone == '') {
+        alert('Введите номер телефона');
+        return false;
+    } else if (!$("[formId='communicationMethod2']").is(':checked')) {
+        alert('Выберите способ связи');
+        return false;
+    }
+
+    $.ajax({
+        url: 'php/application.php',
+        type: 'POST',
+        cache: false,
+        data: { 'name': name , 'phone': phone, 'communicationMethod': communicationMethod },
+        dataType: 'html',
+        beforeSend: function () {
+            $('#sendMail2').prop('disabled', true);
+        },
+        success: function () {
+            $('#sendMail2').prop('disabled', false);
+			$('.zForm').addClass('display');
+			$('.zApplication').removeClass('display');
+        }
+    })
+    .done(function() {
+        console.log("success");
+    })
+    .fail(function() {
+        console.log("error");
+    })
+    .always(function() {
+        console.log("complete");
+    });
+
+
+});
+
+				// 3 WIDTH NAME
+
+$("[formId='sendMail3']").on('click', function() {
+    let name = $("[formId='name3']").val();
+    let phone = $("[formId='phone3']").val();
+    let communicationMethod = $("[formId='communicationMethod3']").val();
+
+
+	if (name == '') {
+        alert('Введите Имя');
+        return false;
+    } else if (phone == '') {
+        alert('Введите номер телефона');
+        return false;
+    } else if (!$("[formId='communicationMethod3']").is(':checked')) {
+        alert('Выберите способ связи');
+        return false;
+    }
+
+    $.ajax({
+        url: 'php/application.php',
+        type: 'POST',
+        cache: false,
+        data: { 'name': name , 'phone': phone, 'communicationMethod': communicationMethod },
+        dataType: 'html',
+        beforeSend: function () {
+            $('#sendMail3').prop('disabled', true);
+        },
+        success: function () {
+            $('#sendMail3').prop('disabled', false);
+			$('.zForm').addClass('display');
+			$('.zApplication').removeClass('display');
+        }
+    })
+    .done(function() {
+        console.log("success");
+    })
+    .fail(function() {
+        console.log("error");
+    })
+    .always(function() {
+        console.log("complete");
+    });
+
+
+});
+
+						// 4 WIDTH OUT NAME
+
+$("[formId='sendMail4']").on('click', function() {
+	let phone = $("[formId='phone4']").val();
+	let communicationMethod = $("[formId='communicationMethod4']").val();
+
+
+ 	if (phone == '') {
+		alert('Введите номер телефона');
+		return false;
+	} else if (communicationMethod == 'hide') {
+		alert('Выберите способ связи');
+		return false;
+	}
+
+	$.ajax({
+		url: 'php/application.php',
+		type: 'POST',
+		cache: false,
+		data: { 'name': name , 'phone': phone, 'communicationMethod': communicationMethod },
+		dataType: 'html',
+		beforeSend: function () {
+			$('#sendMail4').prop('disabled', true);
+		},
+		success: function () {
+			$('#sendMail4').prop('disabled', false);
+			$('.zForm').addClass('display');
+			$('.zApplication').removeClass('display');
+		}
+	})
+	.done(function() {
+		console.log("success");
+	})
+	.fail(function() {
+		console.log("error");
+	})
+	.always(function() {
+		console.log("complete");
+	});
+
+
+});
+
+						// 5 MOBILE   POP UP
+
+$("[formId='sendMail5']").on('click', function() {
+    let name = $("[formId='name5']").val();
+    let phone = $("[formId='phone5']").val();
+    let communicationMethod = $("[formId='communicationMethod5']").val();
+
+	if (name == '') {
+        alert('Введите Имя');
+        return false;
+    } else if (phone == '') {
+        alert('Введите номер телефона');
+        return false;
+    } else if (communicationMethod == null) {
+        alert('Выберите способ связи');
+        return false;
+    }
+
+    $.ajax({
+        url: 'php/application.php',
+        type: 'POST',
+        cache: false,
+        data: { 'name': name , 'phone': phone, 'communicationMethod': communicationMethod },
+        dataType: 'html',
+        beforeSend: function () {
+            $('#sendMail5').prop('disabled', true);
+        },
+        success: function () {
+            $('#sendMail5').prop('disabled', false);
+			$('.zForm').addClass('display');
+			$('.zApplication').removeClass('display');
+        }
+    })
+    .done(function() {
+        console.log("success");
+    })
+    .fail(function() {
+        console.log("error");
+    })
+    .always(function() {
+        console.log("complete");
+    });
+
+
+});
+
+						// 5 MOBILE   WITH NAME
+
+$("[formId='sendMail6']").on('click', function() {
+	let name = $("[formId='name6']").val();
+	let phone = $("[formId='phone6']").val();
+	let communicationMethod = $("[formId='communicationMethod6']").val();
+
+	if (name == '') {
+		alert('Введите Имя');
+		return false;
+	} else if (phone == '') {
+		alert('Введите номер телефона');
+		return false;
+	} else if (communicationMethod == null) {
+		alert('Выберите способ связи');
+		return false;
+	}
+
+	$.ajax({
+		url: 'php/application.php',
+		type: 'POST',
+		cache: false,
+		data: { 'name': name , 'phone': phone, 'communicationMethod': communicationMethod },
+		dataType: 'html',
+		beforeSend: function () {
+		$('#sendMail6').prop('disabled', true);
+		},
+		success: function () {
+		$('#sendMail6').prop('disabled', false);
+		$('.zForm').addClass('display');
+		$('.zApplication').removeClass('display');
+		}
+	})
+	.done(function() {
+		console.log("success");
+	})
+	.fail(function() {
+		console.log("error");
+	})
+	.always(function() {
+		console.log("complete");
+	});
+
+
+});
+
+// 5 MOBILE   WITH OUT NAME
+
+$("[formId='sendMail7']").on('click', function() {
+	let phone = $("[formId='phone7']").val();
+	let communicationMethod = $("[formId='communicationMethod7']").val();
+
+	 if (phone == '') {
+		alert('Введите номер телефона');
+		return false;
+	} else if (communicationMethod == null) {
+		alert('Выберите способ связи');
+		return false;
+	}
+
+	$.ajax({
+		url: 'php/application.php',
+		type: 'POST',
+		cache: false,
+		data: { 'name': name , 'phone': phone, 'communicationMethod': communicationMethod },
+		dataType: 'html',
+		beforeSend: function () {
+		$('#sendMail7').prop('disabled', true);
+		},
+		success: function () {
+		$('#sendMail7').prop('disabled', false);
+		$('.zForm').addClass('display');
+		$('.zApplication').removeClass('display');
+		}
+	})
+	.done(function() {
+		console.log("success");
+	})
+	.fail(function() {
+		console.log("error");
+	})
+	.always(function() {
+		console.log("complete");
+	});
+
+
+});
+
+// 						NO RIGHT CLiCK
+//
 // document.oncontextmenu = function() {
 // 	return false;
 // };
